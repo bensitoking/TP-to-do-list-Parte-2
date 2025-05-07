@@ -1,6 +1,5 @@
 import React from "react";
 import "./AgregarTarea.css"
-<link rel="stylesheet" href="AgregarTarea.css" />
 function AgregarTarea(){
     return(
         <>

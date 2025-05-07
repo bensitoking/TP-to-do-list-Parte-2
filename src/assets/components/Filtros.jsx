@@ -1,6 +1,5 @@
 import React from "react";
 import "./Filtros.css"
-<link rel="stylesheet" href="Filtros.css" />
 function Filtros(){
     return(
         <div class="filtros">
