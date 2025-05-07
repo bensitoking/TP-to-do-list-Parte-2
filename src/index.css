@@ -49,3 +49,8 @@ ul {
     border-radius: 8px;
   }
   
+  
+.tarea-completada {
+    text-decoration: line-through;
+    color: rgb(36, 34, 34);
+  }
