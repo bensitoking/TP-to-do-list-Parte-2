@@ -1,20 +1,20 @@
 import React from "react";
-import "./Tarea.css"
-<link rel="stylesheet" href="Tarea.css" />
+import "./Tarea.css";
 
-function Tarea(){
-    return (
-        <>
-            <span>Cocinar</span>
-            {/*${tarea.texto}*/}
-        <div>
-            <button >✔</button>
-            {/*onclick="completar(${indexReal})"*/}
-            <button >🗑</button>
-            {/*onclick="borrar(${indexReal})"*/}
-        </div>
-    </>
-    );
-    
+function Tarea({ tarea, onCompletar, onEliminar }) {
+  return (
+    <div className="tarea">
+      <span
+        style={{ textDecoration: tarea.completada ? "line-through" : "none" }}
+      >
+        {tarea.texto}
+      </span>
+      <div>
+        <button onClick={onCompletar}>✔</button>
+        <button onClick={onEliminar}>🗑</button>
+      </div>
+    </div>
+  );
 }
+
 export default Tarea;

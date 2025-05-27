@@ -1,13 +1,14 @@
 import React from "react";
-import "./Filtros.css"
-function Filtros(){
-    return(
-        <div class="filtros">
-      <button data-filtro="todas">Todas</button>
-      <button data-filtro="pendientes">Pendientes</button>
-      <button data-filtro="completadas">Completadas</button>
+import "./Filtros.css";
+
+function Filtros({ onFiltrar }) {
+  return (
+    <div className="filtros">
+      <button onClick={() => onFiltrar("todas")}>Todas</button>
+      <button onClick={() => onFiltrar("pendientes")}>Pendientes</button>
+      <button onClick={() => onFiltrar("completadas")}>Completadas</button>
     </div>
-    );
-    
+  );
 }
+
 export default Filtros;
