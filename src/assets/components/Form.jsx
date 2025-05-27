@@ -37,7 +37,6 @@ function Formulario() {
     setTareas(tareas.filter((t) => !t.completada));
   };
 
-  // Filtrar tareas según filtro activo
   const tareasFiltradas = tareas.filter((tarea) => {
     if (filtro === "todas") return true;
     if (filtro === "pendientes") return !tarea.completada;

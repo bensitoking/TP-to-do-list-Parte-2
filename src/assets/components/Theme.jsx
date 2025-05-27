@@ -2,14 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Theme.css";
 
 function Theme() {
-  // Estado para saber si está en modo oscuro o no
   const [darkMode, setDarkMode] = useState(() => {
-    // Intentamos recuperar la preferencia guardada en localStorage
     const saved = localStorage.getItem("darkMode");
     return saved === "true" || false;
   });
 
-  // Efecto para agregar/quitar la clase al body y guardar en localStorage
   useEffect(() => {
     const body = document.body;
     if (darkMode) {
@@ -20,7 +17,6 @@ function Theme() {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
-  // Al hacer click alternamos el estado
   const toggleTheme = () => {
     setDarkMode((prev) => !prev);
   };
